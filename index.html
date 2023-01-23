@@ -15,45 +15,44 @@
   <script src="app.js" defer></script>
 </head>
 
-<body class="debug">
-  <style>
-    body.debug .container,
-    body.debug .container-fluid {
-      outline: 2px double blue;
-      outline-offset: -2px;
-    }
-
-    body.debug .row {
-      outline: 2px dashed red;
-      outline-offset: -2px;
-    }
-
-    body.debug [class*="col-"] {
-      outline: 2px dotted forestgreen;
-      outline-offset: -3px;
-    }
-  </style>
-  <main>
-    <div class="container-fluid p-2">
-      <div class="row justify-content-center">
+<body class="background_field">
+  <header>
+    <div class="container my-4">
+      <div class="row">
         <div class="col-12 text-end">
-          <button onclick="reset()">RESET SCORES</button>
-        </div>
-        <div class="col-10 d-flex flex-column text-center border border-primary fs-1">
-          <div id="home_button">0</div>
-          <div id="away_button">0</div>
-        </div>
-        <div class="col-6 btn btn-primary">
-          <div onclick="button_home_add()">Home</div>
-        </div>
-        <div class="col-6 btn btn-primary">
-          <div onclick="button_away_add()">Away</div>
+          <div class="btn btn-danger fs-1" onclick="reset()">RESET SCORES</div>
         </div>
       </div>
     </div>
+  </header>
 
 
-
+  <main>
+    <div class="container p-3">
+      <div class="row justify-content-center">
+        <div class="col-10 d-flex justify-content-around score_border giantfont text-center">
+          <div id="home_button">0</div>
+          <!-- TODO Ask about double numbers later -->
+          <div id="away_button">0</div>
+        </div>
+        <div class="col-10 p-4 d-flex justify-content-around">
+          <div class="btn btn-danger fs-1">
+            <div onclick="button_home_add()">HOME +1</div>
+          </div>
+          <div class="btn btn-danger fs-1">
+            <div onclick="button_away_add()">AWAY +1</div>
+          </div>
+        </div>
+        <div class="col-10 p-4 d-flex justify-content-around">
+          <div class="btn btn-danger fs-1">
+            <div onclick="button_home_add3()">HOME +3</div>
+          </div>
+          <div class="btn btn-danger fs-1">
+            <div onclick="button_away_add3()">AWAY +3</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
 </body>

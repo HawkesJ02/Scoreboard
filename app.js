@@ -16,15 +16,23 @@ function draw_away(){
 }
 
 function button_home_add(){
-  console.log('Home increase');
   home += 1;
   draw_home();
 }
 
+function button_home_add3(){
+  home += 3;
+  draw_home();
+}
+
 function button_away_add(){
-  console.log('Away increase');
  away += 1;
-  draw_away()
+  draw_away();
+}
+
+function button_away_add3(){
+ away += 3;
+  draw_away();
 }
 
 function reset(){
